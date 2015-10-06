@@ -42,6 +42,17 @@
  - このリポジトリをfork, clone。
  - `cd daily-scala/learning-scala`
 - IntelliJ(などで開く)
+ - sbt実行する場合
+```bash
+# Mac/Linux
+$ cd recap-learning-scala
+$ bin/sbt
+
+# Win
+$ cd recap-learning-scala
+$ bin\sbt.bat
+``` 
+
  
 ### brew を使う場合
 
