@@ -53,7 +53,7 @@ val f: Function1[Int, String] = new Function1[Int, String] {
 
 ## 覚えること！多すぎぃぃい
 
-- https://gist.github.com/gakuzzzz/10104162
+- https://gist.github.com/gakuzzzz/10104162<br>
 これを読めばOK♪
 
 ## Next
