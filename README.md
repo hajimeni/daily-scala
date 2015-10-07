@@ -37,6 +37,5 @@ Scalaっぽいコードが書けるようになろう。
 
 ※現実問題を解く場合には妥協点があるので実際のプロジェクトでは例外があります。
 
-
 ----
-[Day1へ](doc/day_01.md)
+[Daily Scala Summaryへ](doc/dayly_scala_summary.md)
