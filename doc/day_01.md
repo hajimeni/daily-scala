@@ -45,11 +45,11 @@
  - sbt実行する場合
 ```bash
 # Mac/Linux
-$ cd recap-learning-scala
+$ cd learning-scala
 $ bin/sbt
 
 # Win
-$ cd recap-learning-scala
+$ cd learning-scala
 $ bin\sbt.bat
 ``` 
 
