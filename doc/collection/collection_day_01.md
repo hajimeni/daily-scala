@@ -14,11 +14,11 @@
 ## Scala Collection APIを知る
 - 大事な情報源
  - 公式のCollection解説
-  - http://docs.scala-lang.org/ja/overviews/collections/introduction.html
+   - http://docs.scala-lang.org/ja/overviews/collections/introduction.html
  - ひしだまさんメモ（コレクションのメソッド一覧見やすい）
-  - http://www.ne.jp/asahi/hishidama/home/tech/scala/collection/method.html
+   - http://www.ne.jp/asahi/hishidama/home/tech/scala/collection/method.html
  - Scala逆引きレシピ
-  - P.178～P.233
+   - P.178～P.233
 
 ## Scala Collection 概要
 - 大きく2種類
