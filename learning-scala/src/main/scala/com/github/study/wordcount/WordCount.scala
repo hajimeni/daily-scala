@@ -10,8 +10,16 @@ class WordCount {
   // https://gist.github.com/j5ik2o/7210762
   //------------------------------------------------------
   def countFruitsFromLines(lines: List[String]): Map[String, Int] = {
-    ???
+    // リストを要素ごとに単語単位に分割する
+    // 分割した単語ごとにカウントする
+
+    lines.mkString(" ").split(" ").groupBy(n => n).map(x => (x._1,x._2.length))
+//    lines.mkString(" ").split(" ").groupBy(identity).map{
+//      case(key,list) => (key, list.length)
+
+//    }
   }
+
 
 //  /**
 //   * 勉強会をやる発端となったダメコード
