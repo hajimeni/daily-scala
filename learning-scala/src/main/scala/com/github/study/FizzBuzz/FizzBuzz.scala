@@ -1,4 +1,4 @@
-package com.github.tamaki.study.tamaki.FizzBuzz
+package com.github.study.FizzBuzz
 
 /**
  * Created by tamaki on 2015/02/08.

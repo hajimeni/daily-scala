@@ -1,4 +1,4 @@
-package com.github.tamaki.study.tamaki.wordcount
+package com.github.study.wordcount
 
 import org.scalatest._
 

@@ -1,4 +1,4 @@
-package com.github.tamaki.study.tamaki.sample
+package com.github.study.sample
 
 import collection.mutable.Stack
 import org.scalatest._

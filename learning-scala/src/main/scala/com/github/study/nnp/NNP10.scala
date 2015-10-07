@@ -1,4 +1,4 @@
-package com.github.tamaki.study.tamaki.nnp
+package com.github.study.nnp
 
 /**
  * Created by tamaki on 2015/02/08.

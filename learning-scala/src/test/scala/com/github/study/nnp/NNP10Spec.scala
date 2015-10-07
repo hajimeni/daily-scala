@@ -1,4 +1,4 @@
-package com.github.tamaki.study.tamaki.nnp
+package com.github.study.nnp
 
 import org.scalatest._
 

@@ -1,4 +1,4 @@
-package com.github.tamaki.study.tamaki.sample
+package com.github.study.sample
 
 /**
  * Created by tamaki on 2015/02/08.

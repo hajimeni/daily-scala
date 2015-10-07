@@ -1,5 +1,4 @@
-package com.github.tanacasino.study
-
+package com.github.study
 
 class Hello {
 

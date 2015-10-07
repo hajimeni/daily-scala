@@ -1,4 +1,4 @@
-package com.github.tamaki.study.tamaki.wordcount
+package com.github.study.wordcount
 
 /**
  * Created by tamaki on 2015/02/08.
