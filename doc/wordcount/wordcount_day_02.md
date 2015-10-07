@@ -21,10 +21,10 @@
  - 関数もオブジェクト
  - for/if/try は 文 ではなく 式！値を返す！
  - Rubyのアイドルが好きな関数はif（!?）
-  - http://fb.dev-plus.jp/column5/profile/
- - Scala界にもアイドルが必要？
-  【Scala超入門～副作用の無いモナドな女への道】～０monad
-  - サイバーさんパネェっ！！！キラキラ女子！！！
+   - http://fb.dev-plus.jp/column5/profile/
+ - Scala界にもアイドルが必要？<br> 
+ 【Scala超入門～副作用の無いモナドな女への道】～０monad<br> 
+   - サイバーさんパネェっ！！！キラキラ女子！！！
  - importとwhileやclass定義等は例外（文とか）
  - Scalaは簡潔に記述できるように様々な省略記法が存在
  - 型推論、プレースホルダー、糖衣構文（シンタックスシュガー）
