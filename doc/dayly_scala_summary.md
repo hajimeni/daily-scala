@@ -1,4 +1,4 @@
-# Day 01
+# Daily Scala Summary
 
 ## 目指すところ
 
@@ -10,30 +10,7 @@
 
 をまずは覚えるとScalaらしいコーディングが出来るようになってくる（らしい）
 
-### お題のネタ
-
-1. @j5ik2o さんのワードカウントの問題
- 1. https://gist.github.com/j5ik2o/7210762
- 1. ScalaのコレクションAPIをざっと見る。
- 1. Scalaのコレクション操作を使うコツ
- 1. FizzBuzz
-1. 再帰・末尾再帰
- 1. なぜ必要か？関数型言語と命令形言語
- 1. 総和計算
- 1. 階乗計算
- 1. 最大値・最小値
- 1. フィボナッチ数列
-
-### 将来のネタ候補
-
-1. jodataimeのScalaラッパーを作って学ぶ(車輪の再発明)
- 1. implicit conversion
-1. aws-sdk-java のラッパーを作って学ぶ
- 1. implicit parameter
-1. BTree + implicit によるアドホック多相・型クラスな感じのBTreeを作る。
-1. Play の Json Reads/Writes のリーディング
-
-## Day1 やること
+## やること
 
 - 開発環境を作る
  - jdk を入れる
@@ -45,15 +22,14 @@
  - sbt実行する場合
 ```bash
 # Mac/Linux
-$ cd recap-learning-scala
+$ cd learning-scala
 $ bin/sbt
 
 # Win
-$ cd recap-learning-scala
+$ cd learning-scala
 $ bin\sbt.bat
 ``` 
 
- 
 ### brew を使う場合
 
 - brewのInstall
@@ -69,8 +45,18 @@ brew cask install intellij-idea-ce
 Ultimate版の場合
 `brew cask install intellij-idea`
 
-### おまけ
+### お題
 
+勉強した順に並べます、内容によっては前後に関連したお題が入ったものもあります
+
+- Day1 [Word Count Day 01](wordcount/wordcount_day_01.md)
+- Day2 [Word Count Day 02](wordcount/wordcount_day_02.md)
+- Day3 [Scala Collection API Day 01](collection/collection_day_01.md)
+- Day4 [Scala Collection API Day 02](collection/collection_day_02.md)
+- Day5 [Scala Collection API Day 03](collection/collection_day_03.md)
+
+
+### おまけ
 Scalaの文法
 - 公式チートシート http://docs.scala-lang.org/cheatsheets/
 - 日本語 http://xerial.org/scala-cookbook/recipes/2012/06/28/grammar/
