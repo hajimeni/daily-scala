@@ -1,4 +1,4 @@
-# Scala Collection API Day 02
+# Scala Collection API Day 04
 
 ## Today
 - 再帰関数を覚える
@@ -46,7 +46,13 @@
 ## 総和計算を末尾再帰にする
 ```
 def sum(n: Int): Int = {
+  if(n == 0) 0
+  else n + sum(n -1)
+}
 
+def sum(acc: Int, n: Int): Int = {
+  if(n == 0) 0
+  else sum(acc + n, n - 1)
 }
 ```
 
