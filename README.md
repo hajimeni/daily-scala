@@ -27,12 +27,12 @@ Scalaっぽいコードが書けるようになろう。
 
 ## Daily Scala 7つの大罪
 
-- var禁止
-- mutable禁止
-- while/forループ禁止
-- null禁止
-- Option.get禁止
-- return禁止
+- var禁止 -> valを使う
+- mutable禁止 -> immutableのものを使う
+- while/forループ禁止 -> mapやforeachなどの高階関数を利用する。もしくは再帰で実装する
+- null禁止 -> 値が無いケースがある場合はOptionを使う
+- Option.get禁止 ->  Option.mapもしくはOption.getOfElseを使う
+- return禁止 -> ブロックの最後の式の結果が、ブロックの結果として返却される
 - if禁止(※値を返す三項演算的なものはOK。collection/optionのAPIで代用できる場合の無駄なチェックは禁止)
 
 ※現実問題を解く場合には妥協点があるので実際のプロジェクトでは例外があります。
