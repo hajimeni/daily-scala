@@ -1,18 +1,9 @@
-# Scala Collection API Day 02
+# Scala Collection API Day 03
 
 ## Today
-- Scala Collection APIを使って遊ぶ
- - REPL再来！
-- コーディング
- - FizzBuzz終わってない人はコーディング
- - 終わった人向けにScala Collection API on REPL
-- 発表会
- - FizzBuzz発表会
-- Nextコーディング
- - FizzBuzzルール変更
+- FizzBuzzコーディング その２
  - 2の倍数は除外する
-- Next Nextコーディング
- - NNP を Collection APIを使って解いてみよう！
+- FizzBuzzコーディング その３～その６
 
 ## Scala Collection API 概要
 
@@ -133,9 +124,10 @@ while/forループ禁止、var禁止でどうぞ
 
 
 ## Next
-- FizzBuzzルール変更コーディング
-- FizzBuzzルール変更発表会
- - and 説明会
+- NNPを解いてみる！
+ - 1つずつじっくり
+ - まずはScala Collection APIを使って解こう！
+ - NMP10、NMP10.specを使います、無かったら各自pullしてください（やり方わからない人は聞いてくださいな）
 
 ----
-[Scala Collection API Day 03へ](collection_day_03.md)
+[Scala Collection API Day 04へ](collection_day_04.md)
