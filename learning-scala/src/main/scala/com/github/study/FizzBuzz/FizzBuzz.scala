@@ -16,6 +16,11 @@ object FizzBuzz {
         case _             => num.toString
       }
     }
-    (1 to 100).withFilter(_%2 != 0).map(f(_)).mkString(",").map(print(_))
+
+
+//    (1 to 100).withFilter(_%2 != 0).map(f(_)).mkString(",").map(println(_))
+
+    println("-FizzBuzz以外のものを合算する-")
+    println( (1 to 100).map(f(_)).withFilter(_ forall {_.isDigit}).map(_.toInt).sum)
   }
 }
