@@ -1,5 +1,7 @@
 package com.github.study.FizzBuzz
 
+import scala.collection.immutable.IndexedSeq
+
 /**
  * Created by tamaki on 2015/02/08.
  */
@@ -14,6 +16,6 @@ object FizzBuzz {
         case _             => num.toString
       }
     }
-    (1 to 100).foreach(num => println( f(num) ) )
+    (1 to 100).withFilter(_%2 != 0).map(f(_)).mkString(",").map(print(_))
   }
 }
