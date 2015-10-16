@@ -7,7 +7,14 @@ trait NNP10 {
 
   // P01 (*) Find the last element of a list.
   def last(list: List[Int]): Int = {
-    ???
+    def go(ls: List[Int]): Int = {
+      ls match {
+        case last :: Nil => last
+        case h :: t => go(t)
+        case _ => throw new IllegalArgumentException
+      }
+    }
+    go(list)
   }
 
   // P02 (*) Find the last but one element of a list.
