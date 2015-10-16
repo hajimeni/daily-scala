@@ -9,10 +9,9 @@ class WordCount {
   // ワードカウント問題
   // https://gist.github.com/j5ik2o/7210762
   //------------------------------------------------------
-  def countFruitsFromLines(lines: List[String]): Map[String, Int] =
-    lines
-      .flatMap(_.split(" "))
-      .foldLeft(Map.empty[String, Int]) { (m, word) => m + (word -> (m.getOrElse(word, 0) + 1)) }
+  def countFruitsFromLines(lines: List[String]): Map[String, Int] = {
+    ???
+  }
 
 
 //  /**
