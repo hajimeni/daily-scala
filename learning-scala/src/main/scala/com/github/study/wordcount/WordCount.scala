@@ -13,7 +13,6 @@ class WordCount {
     ???
   }
 
-
 //  /**
 //   * 勉強会をやる発端となったダメコード
 //   * @param lines
