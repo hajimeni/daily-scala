@@ -1,4 +1,4 @@
-# Scala Collection API Day 04
+# Scala Collection API Day 05
 
 ## Today
 - 再帰関数を覚える
