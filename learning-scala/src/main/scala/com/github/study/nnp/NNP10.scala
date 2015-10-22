@@ -8,7 +8,8 @@ import scala.annotation.tailrec
 trait NNP10 {
 
   // P01 (*) Find the last element of a list.
-  def last(list: List[Int]): Int =
+  @tailrec
+  final def last(list: List[Int]): Int =
     list match {
       case head :: Nil => head
       case head :: tail => last(tail)
@@ -25,14 +26,11 @@ trait NNP10 {
 
   penultimate(List(1, 2, 3, 10))
 
-  def nth(n: Int, list: List[Int]): Int = {
-    def go(n: Int, list: List[Int]): Int =
-      (n, list) match {
-        case (0, head :: tail) => head
-        case (_, head :: tail) => go(n - 1, tail)
-      }
-    go(n, list)
-  }
+  def nth(n: Int, list: List[Int]): Int =
+    (n, list) match {
+      case (0, head :: tail) => head
+      case (_, head :: tail) => nth(n - 1, tail)
+    }
 
   nth(2, List(1, 1, 2, 3, 5, 8))
 
@@ -94,15 +92,17 @@ trait NNP10 {
     go(list, List.empty[Symbol], null)
   }
 
+  @tailrec
+  private def replaceLast[T](ls: List[T], newLast: T, acc: List[T]): List[T] =
+    ls match {
+      case last :: Nil =>
+        acc :+ newLast
+      case h :: tail =>
+        replaceLast(tail, newLast, acc :+ h)
+    }
+
   def pack(list: List[Symbol]): List[List[Symbol]] = {
-    @tailrec
-    def replaceLast[T](ls: List[T], newLast: T, acc: List[T]): List[T] =
-      ls match {
-        case last :: Nil =>
-          acc :+ newLast
-        case h :: tail =>
-          replaceLast(tail, newLast, acc :+ h)
-      }
+
 
     @tailrec
     def go[T](ls: List[T], acc: List[List[T]], last: T): List[List[T]] =
@@ -119,6 +119,16 @@ trait NNP10 {
   }
 
   def encode(list: List[Symbol]): List[(Int, Symbol)] = {
-    ???
+
+    def go[T](ls: List[T], acc: List[(Int, T)], countAcc: Int, key: T): List[(Int, T)] =
+      ls match {
+        case Nil =>
+          acc :+(countAcc, key)
+        case h :: t if h == key =>
+          go(t, acc, countAcc + 1, key)
+        case h :: t =>
+          go(t, acc :+(countAcc, key), 1, h)
+      }
+    go(list.tail, List.empty[(Int, Symbol)], 1, list.head)
   }
 }
