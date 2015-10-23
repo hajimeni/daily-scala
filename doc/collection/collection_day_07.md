@@ -7,7 +7,6 @@
   - 終わった人はラスボス 7番
 - 10時10分までコーディングタイム
 - 8,9,10番解説（10分）
-- 7番解説（5分）
 
 
 
@@ -40,10 +39,12 @@ persons match {
 }
 ```
 ## Next
+- 再帰・末尾再帰大会 Part 4
+  - ラスボス7番
 - NNPを振り返り
   - Scala Collection API
   - Recursive Function
   - Tail Recursive
 
 ----
-[Scala Collection API Day 07へ](collection_day_07.md)
+[Scala Collection API Day 08へ](collection_day_08.md)
