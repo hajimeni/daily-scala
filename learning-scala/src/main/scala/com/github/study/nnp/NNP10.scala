@@ -93,8 +93,13 @@ trait NNP10 {
     go(nested, List.empty[Any]).reverse
   }
 
+  /**
+   * List連結演算子利用
+   * @param nested
+   * @return
+   */
   def flatten2(nested: List[Any]): List[Any] = {
-
+    @tailrec
     def go(ls: List[Any], acc: List[Any]): List[Any] = {
       ls match {
         case Nil => acc
@@ -102,11 +107,9 @@ trait NNP10 {
           go(h ::: t, acc)
         case h :: t =>
           go(t, h :: acc)
-
       }
     }
     go(nested, List.empty[Any]).reverse
-
   }
 
   def compress(list: List[Symbol]): List[Symbol] = {
