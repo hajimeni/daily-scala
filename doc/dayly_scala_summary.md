@@ -57,7 +57,8 @@ Ultimate版の場合
 - Day6 [Scala Collection API Day 04](collection/collection_day_04.md)
 - Day7 [Scala Collection API Day 05](collection/collection_day_05.md)
 - Day8 [Scala Collection API Day 06](collection/collection_day_06.md)
-
+- Day9 [Scala Collection API Day 07](collection/collection_day_07.md)
+- Day10 [Scala Collection API Day 07](collection/collection_day_08.md)
 
 ### おまけ
 Scalaの文法
