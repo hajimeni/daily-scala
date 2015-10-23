@@ -64,11 +64,39 @@ trait NNP10 {
   def isPalindrome(list: List[Int]): Boolean =
     equalList(list, reverse(list))
 
-
+  /**
+   * List連結自作版
+   * @param nested
+   * @return
+   */
   def flatten(nested: List[Any]): List[Any] = {
 
-    def go(ls1: List[Any], acc: List[Any]): List[Any] = {
-      ls1 match {
+    @tailrec
+    def concatRev(ls1: List[Any], ls2: List[Any], acc: List[Any]): List[Any] = {
+      (ls1, ls2) match {
+        case (Nil, Nil) => acc
+        case (h :: t, ls) => concatRev(t, ls, h :: acc)
+        case (Nil, h :: t) => concatRev(Nil, t, h :: acc)
+      }
+    }
+
+    @tailrec
+    def go(ls: List[Any], acc: List[Any]): List[Any] = {
+      ls match {
+        case Nil => acc
+        case (h: List[Any]) :: t =>
+          go(concatRev(h, t, List.empty[Any]).reverse, acc)
+        case h :: t =>
+          go(t, h :: acc)
+      }
+    }
+    go(nested, List.empty[Any]).reverse
+  }
+
+  def flatten2(nested: List[Any]): List[Any] = {
+
+    def go(ls: List[Any], acc: List[Any]): List[Any] = {
+      ls match {
         case Nil => acc
         case (h: List[Any]) :: t =>
           go(h ::: t, acc)
