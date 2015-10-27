@@ -72,11 +72,11 @@ trait NNP10 {
   def flatten(nested: List[Any]): List[Any] = {
 
     @tailrec
-    def concatRev(ls1: List[Any], ls2: List[Any], acc: List[Any]): List[Any] = {
+    def concat(ls1: List[Any], ls2: List[Any], acc: List[Any]): List[Any] = {
       (ls1, ls2) match {
-        case (Nil, Nil) => acc
-        case (h :: t, ls) => concatRev(t, ls, h :: acc)
-        case (Nil, h :: t) => concatRev(Nil, t, h :: acc)
+        case (Nil, Nil) => acc.reverse
+        case (h :: t, ls) => concat(t, ls, h :: acc)
+        case (Nil, h :: t) => concat(Nil, t, h :: acc)
       }
     }
 
@@ -85,7 +85,7 @@ trait NNP10 {
       ls match {
         case Nil => acc
         case (h: List[Any]) :: t =>
-          go(concatRev(h, t, List.empty[Any]).reverse, acc)
+          go(concat(h, t, List.empty[Any]), acc)
         case h :: t =>
           go(t, h :: acc)
       }
