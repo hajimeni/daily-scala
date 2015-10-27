@@ -51,4 +51,4 @@ persons match {
 ## Next
 
 ----
-[Daily Scala Summaryへ](../dayly_scala_summary.md)
+[Scala Collection API Day 09へ](collection_day_09.md)
