@@ -82,9 +82,66 @@ trait NNP10 {
     list == reverse(list)
   }
 
+  /**
+   * 用意されたテストケースなら動くが、階層が深くなると動かない
+   * @param nested
+   * @return
+   */
   def flatten(nested: List[Any]): List[Any] = {
-    ???
+
+    @tailrec
+    def flatten_(list:List[Any],acc:List[Any],tailAcc:List[Any]):List[Any] ={
+
+      println("-----------------")
+      println(list)
+      println(acc)
+      println(tailAcc)
+
+      list match {
+        case Nil =>
+          println("LLLLLAST")
+          tailAcc match {
+            case Nil => acc
+            case _  => flatten_(tailAcc,acc,tailAcc)
+          }
+        case (head:List[Any]) :: tail =>
+          tailAcc match {
+            case Nil => flatten_(head,acc,tail)
+            case _   => flatten_(head,acc,tail)
+          }
+        case head :: tail             => flatten_(tail::tailAcc,head::acc,List.empty)
+      }
+
+    }
+
+    flatten_(nested,List.empty,List.empty).reverse
   }
+
+  /**
+   * 末尾再帰になってないけどこれなら動く
+   * @param nested
+   * @return
+   */
+  def flattenNg(nested: List[Any]): List[Any] = {
+
+
+    def flatten_(list:List[Any],acc:List[Any]):List[Any] ={
+
+      list match {
+        case Nil => acc
+        case (head:List[Any]) :: tail => {
+          flatten_(tail,flatten_(head,acc))
+        }
+        case head :: tail => {
+          flatten_(tail,head::acc)
+        }
+      }
+
+    }
+
+    flatten_(nested,List.empty).reverse
+  }
+
 
   def compress(list: List[Symbol]): List[Symbol] = {
 
