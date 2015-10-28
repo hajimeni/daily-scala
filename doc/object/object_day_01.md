@@ -58,7 +58,7 @@
 - case class 再入門
 
 ----
-[Scala Object Day 01 02へ](object_day_02.md)
+[Scala Object Day 02へ](object_day_02.md)
 
 
 
