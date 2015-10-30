@@ -23,7 +23,7 @@
 - 親クラス を sealedで縛ることでパターンマッチの漏れをチェックすることができる
 
 ## コップ本の例をちょっとだけ実装する
-- https://www.cs.helsinki.fi/u/wikla/OTS/Sisalto/examples/html/ch15.html
+- https://github.com/hajimeni/daily-scala/blob/master/learning-scala/src/main/scala/com/github/study/sample/Expr.scala
 - 算術式を操作するライブラリを作る
 - Expr/Var/Number/UnOp/BinOp
 - コップ本買ってます？ or 読みました？
