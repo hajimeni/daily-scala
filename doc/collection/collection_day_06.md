@@ -1,4 +1,4 @@
-# Scala Collection API Day 05
+# Scala Collection API Day 06
 
 ## Today
 - 再帰関数を覚える
@@ -6,6 +6,7 @@
  - 末尾再帰
 - NNPを解く
  - 1～5 を再帰関数（なるべく末尾再帰で）
+ - 解き方解説
 
 ## 末尾再帰
 - スタックオーバーフロー問題
@@ -39,9 +40,9 @@
    - 当然問題によっては↑禁止ですｗｗそこはよしなに！
 
 ## Next
-- NNPコーディング part 3
+- NNPコーディング part 4
 - NNPを発表
- - 6.7以降を頑張りまっしょい
+ - 8,9,10 を解いて最後に7以降を頑張りまっしょい
 
 ----
-[Scala Collection API Day 06へ](collection_day_06.md)
+[Scala Collection API Day 07へ](collection_day_07.md)
