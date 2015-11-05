@@ -49,9 +49,10 @@ class BTreeSpec extends FunSpec with Matchers {
       }
 
       it("should find value of BTree") {
-        println("\nbTree1 = " + bTree1.find(2))
-        println("\nbTree2 = " + bTree2.find(3))
-        println("\nbTree3 = " + bTree3.find(4))
+        bTree1.find(1) should be (Some(Leaf(1)))
+        bTree1.find(2) should be (None)
+        bTree2.find(3) should be (Some(Leaf(3)))
+        bTree3.find(4) should be (Some(Branch(Branch(Leaf(1),2,Leaf(3)),4,Branch(Leaf(5),6,Leaf(7)))))
       }
       /*
       it("should create BTree from list") {

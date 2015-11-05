@@ -13,15 +13,19 @@ case class Branch(left: Node, value: Int, right: Node) extends Node {
   override def max: Int = List[Int](left.max, value, right.max).max
   override def min: Int = List[Int](left.min, value, right.min).min
   override def sum: Int = List[Int](left.sum, value, right.sum).sum
-  override def find(i: Int): Option[Node] =
-    i match {
-      case x if i == value => Some(this)
-      case x if left.find(x).isDefined => left.find(x)
-      case x if right.find(x).isDefined => right.find(x)
-      case _ => None
-    }
+  override def find(i: Int): Option[Node] = {
+    if (i == value)
+      Some(this)
+    else
+      left.find(i) match {
+        case Some(x) => Some(x)
+        case _ => right.find(i) match {
+          case Some(x) => Some(x)
+          case _ => None
+        }
+      }
+  }
 }
-
 case class Leaf(value: Int) extends Node {
   override def size: Int = 1
   override def max: Int = value
