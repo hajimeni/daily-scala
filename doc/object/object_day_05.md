@@ -3,8 +3,7 @@
 ## Today
 -  case classを使って簡易BTreeを作ろう
   -  https://gist.github.com/j5ik2o/7332812
-  - find
-  - まとめ
+  - BTree のおまけ
 
 ## case class 例題
 - 木構造の再帰データを扱うのに非常に役立つ by コップ本
@@ -19,8 +18,11 @@
 - find
 - 余裕がある人は ListからBTreeを作れるようにする
 
-## Next
+## BTree のおまけ
+- ListからBTreeを作ってくださいな！
+- 今回のBTreeは1,3,7,15,31,..の数しかできませんのでそれでOKです
 
+## Next
 
 ----
 [Daily Scala Summaryへ](../dayly_scala_summary.md)
