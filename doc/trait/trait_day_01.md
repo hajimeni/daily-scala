@@ -1,7 +1,7 @@
 # Scala Trait Day 01
 
 ## Today
-- traitの話
+- traitの話（座学）
 
 ## trait
 - 特徴・性質・特質などを意味する言葉
