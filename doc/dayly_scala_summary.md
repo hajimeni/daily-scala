@@ -65,7 +65,7 @@ Ultimate版の場合
 - Day14 [Scala Object Day 03](object/object_day_03.md)
 - Day15 [Scala Object Day 04](object/object_day_04.md)
 - Day16 [Scala Object Day 04](object/object_day_05.md)
-- Day17 [Scala Trait Day 01](object/object_day_01.md)
+- Day17 [Scala Trait Day 01](trait/trait_day_01.md)
 
 ### おまけ
 Scalaの文法
