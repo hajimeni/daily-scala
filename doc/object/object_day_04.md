@@ -22,6 +22,10 @@
 - find
 - 余裕がある人は ListからBTreeを作れるようにする
 
+## BTree のおまけ
+- ListからBTreeを作ってくださいな！
+- 今回のBTreeは1,3,7,15,31,..の数しかできませんのでそれでOKです
+
 ## Next
 - case classを使って簡易BTreeを作ろう
   - BTree のおまけ
