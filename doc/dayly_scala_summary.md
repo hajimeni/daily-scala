@@ -58,9 +58,14 @@ Ultimate版の場合
 - Day7 [Scala Collection API Day 05](collection/collection_day_05.md)
 - Day8 [Scala Collection API Day 06](collection/collection_day_06.md)
 - Day9 [Scala Collection API Day 07](collection/collection_day_07.md)
-- Day10 [Scala Collection API Day 07](collection/collection_day_08.md)
-- Day11 [Scala Object Day 01](object/object_day_01.md)
-- Day12 [Scala Object Day 02](object/object_day_02.md)
+- Day10 [Scala Collection API Day 08](collection/collection_day_08.md)
+- Day11 [Scala Collection API Day 09](collection/collection_day_09.md)
+- Day12 [Scala Object Day 01](object/object_day_01.md)
+- Day13 [Scala Object Day 02](object/object_day_02.md)
+- Day14 [Scala Object Day 03](object/object_day_03.md)
+- Day15 [Scala Object Day 04](object/object_day_04.md)
+- Day16 [Scala Object Day 04](object/object_day_05.md)
+- Day17 [Scala Trait Day 01](object/object_day_01.md)
 
 ### おまけ
 Scalaの文法
