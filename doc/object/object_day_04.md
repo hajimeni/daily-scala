@@ -1,10 +1,12 @@
-# Scala Object Day 03
+# Scala Object Day 04
 
 ## Today
 -  case classを使って簡易BTreeを作ろう
   -  https://gist.github.com/j5ik2o/7332812
-  - ０番
-  - １番
+  - max
+  - min
+  - sum
+  - avg
 
 ## case class 例題
 - 木構造の再帰データを扱うのに非常に役立つ by コップ本
@@ -21,14 +23,11 @@
 
 ## Next
 - case classを使って簡易BTreeを作ろう
-  - max
-  - min
-  - sum
-  - avg
+  - find
 
 
 ----
-[Scala Object Day 04へ](object_day_04.md)
+[Scala Object Day 05へ](object_day_05.md)
 
 
 
