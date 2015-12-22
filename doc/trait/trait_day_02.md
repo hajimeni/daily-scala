@@ -37,4 +37,4 @@
   - Stackable Traitの写経
 
 ----
-[Scala Trait Day 02へ](trait_day_02.md)
+[Scala Trait Day 03へ](trait_day_03.md)
