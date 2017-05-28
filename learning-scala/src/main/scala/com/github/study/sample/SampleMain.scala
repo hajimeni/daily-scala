@@ -3,9 +3,11 @@ package com.github.study.sample
 /**
  * Created by tamaki on 2015/02/08.
  */
-object SampleMain {
+object SampleMain{
 
   def main(args: Array[String]): Unit = {
+
+
     println("hello World!")
     val s = "すから"
     println(s"hello $s")
