@@ -1,5 +1,7 @@
 package com.github.study.wordcount
 
+import scala.annotation.tailrec
+
 /**
  * Created by tamaki on 2015/02/08.
  */
@@ -10,7 +12,28 @@ class WordCount {
   // https://gist.github.com/j5ik2o/7210762
   //------------------------------------------------------
   def countFruitsFromLines(lines: List[String]): Map[String, Int] = {
-    ???
+    @tailrec
+    def count(lines: List[String], m: Map[String, Int] = Map()): Map[String, Int] = {
+      lines match {
+        case head :: tail =>
+          count(
+            tail,
+            head.split(" ")
+            .foldLeft(m){
+              (mm, k) =>
+                mm.updated(
+                  k,
+                  mm.get(k)
+                  .map(_ + 1)
+                  .getOrElse(1)
+                )
+            }
+          )
+        case _ => m
+      }
+    }
+
+    count(lines)
   }
 
 //  /**
