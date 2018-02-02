@@ -13,7 +13,7 @@ class WordCount {
     val fruitList = lines.flatMap(_.split(" "))
     fruitList.groupBy(identity).mapValues(_.size)
   }
-  
+
 //  /**
 //   * 勉強会をやる発端となったダメコード
 //   * @param lines
