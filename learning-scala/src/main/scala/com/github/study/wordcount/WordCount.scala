@@ -10,7 +10,7 @@ class WordCount {
   // https://gist.github.com/j5ik2o/7210762
   //------------------------------------------------------
   def countFruitsFromLines(lines: List[String]): Map[String, Int] = {
-    // line.split(" ")でList[String]にして、.groupByでkey->value(List[String])型に、.mapValues(_.size)は値(List[String])をsizeに変換
+    // line.split(" ")でList[String]にして、.groupByでkey->value(List[String])型に、.mapValuesは値(List[String])をsizeに変換
     lines.flatMap(line => line.split(" ")).groupBy(s => s).mapValues(v => v.size)
   }
 
