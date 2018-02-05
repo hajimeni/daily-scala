@@ -10,7 +10,8 @@ class WordCount {
   // https://gist.github.com/j5ik2o/7210762
   //------------------------------------------------------
   def countFruitsFromLines(lines: List[String]): Map[String, Int] = {
-    ???
+    val fruitList = lines.flatMap(_.split(" "))
+    fruitList.groupBy(identity).mapValues(_.size)
   }
 
 //  /**
