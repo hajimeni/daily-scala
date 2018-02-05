@@ -12,7 +12,7 @@ class WordCount {
   def countFruitsFromLines(lines: List[String]): Map[String, Int] = {
     // line.split(" ")でList[String]にして、.groupByでkey->value(List[String])型に、.mapValuesは値(List[String])をsizeに変換
     lines.flatMap(line => line.split(" "))
-      .groupBy(s => s)
+      .groupBy(identity)
       .mapValues(v => v.size)
   }
 
