@@ -8,13 +8,22 @@ sealed trait Node {
 }
 
 case class Leaf(value: Int) extends Node {
-  def size: Int = 1
+  def size: Int = ???
 }
 
 case class Branch(left:  Node, value: Int, right: Node) extends Node {
-  def size: Int = left.size + 1 + right.size
+  def size: Int = ???
 }
 
 case class BTree(node: Node) {
-  def size: Int = node.size
+  def size: Int = ???
+  def max: Int = ???
+  def min: Int = ???
+  def avg: Int = ???
+  def sum: Int = ???
 }
+
+object BTree {
+  def apply(list: List[Int]): BTree = ???
+}
+
