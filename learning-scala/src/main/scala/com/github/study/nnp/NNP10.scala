@@ -18,13 +18,14 @@ trait NNP10 {
     list match {
       case x :: _ :: Nil => x
       case _ :: y :: z => penultimate(y :: z)
+//      case _ =>
     }
   }
 
   def nth(n: Int, list: List[Int]): Int = {
     list match {
-      case x :: _ if index == 0 => x
-      case _ :: y if index > 0 => nth(index - 1, y)
+      case x :: _ if n == 0 => x
+      case _ :: y if n > 0 => nth(n - 1, y)
     }
   }
 
@@ -45,7 +46,7 @@ trait NNP10 {
         case x :: y => createReverse(y, x :: acc)
       }
     }
-    createReverse(list, nil)
+    createReverse(list, Nil)
   }
 
   def isPalindrome(list: List[Int]): Boolean = {
@@ -53,7 +54,6 @@ trait NNP10 {
   }
 
   def flatten(nested: List[Any]): List[Any] = {
-    ???
   }
 
   def compress(list: List[Symbol]): List[Symbol] = {
