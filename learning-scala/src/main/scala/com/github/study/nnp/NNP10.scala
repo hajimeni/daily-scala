@@ -10,6 +10,7 @@ trait NNP10 {
     list match {
       case x :: Nil => x
       case _ :: y => last(y)
+      case _ => sys.error("不正な値です。")
     }
   }
 
@@ -18,7 +19,7 @@ trait NNP10 {
     list match {
       case x :: _ :: Nil => x
       case _ :: y :: z => penultimate(y :: z)
-//      case _ =>
+      case _ => sys.error("不正な値です。")
     }
   }
 
@@ -42,6 +43,7 @@ trait NNP10 {
   def reverse(list: List[Int]): List[Int] = {
     def createReverse(list: List[Int], acc: List[Int]): List[Int] = {
       list match {
+        case Nil => Nil
         case x :: Nil => x :: acc
         case x :: y => createReverse(y, x :: acc)
       }
@@ -54,10 +56,46 @@ trait NNP10 {
   }
 
   def flatten(nested: List[Any]): List[Any] = {
+    def flat(target: List[Any], acc: List[Any]): List[Any]= {
+      target match {
+        case Nil => acc
+        case x :: Nil =>
+          x match {
+            case x: List[Any] => flat(x, acc)
+            case x => x :: acc
+          }
+        case x :: y => {
+          x match {
+            case x: List[Any] => {
+              flat(y, flat(x, acc))
+            }
+            case x => flat(y, x :: acc)
+          }
+        }
+      }
+    }
+    flat(nested, Nil).reverse
   }
 
   def compress(list: List[Symbol]): List[Symbol] = {
-    ???
+    def createCompress(target: List[Symbol], compress: List[Symbol]): List[Symbol] = {
+      target match {
+        case Nil => compress
+        case x :: Nil => compress match {
+          case Nil => x :: compress
+          case a :: Nil if x != a => x :: compress
+          case a :: b if x != a => x :: compress
+          case a :: b if x == a => compress
+        }
+        case x :: y => createCompress(y, compress match {
+          case Nil => x :: compress
+          case a :: Nil if x != a => x :: compress
+          case a :: b if x != a => x :: compress
+          case _ :: b => compress
+        })
+      }
+    }
+    createCompress(list, Nil).reverse
   }
 
   def pack(list: List[Symbol]): List[List[Symbol]] = {
