@@ -61,15 +61,13 @@ trait NNP10 {
         case Nil => acc
         case x :: Nil =>
           x match {
-            case x: List[Any] => flat(x, acc)
-            case x => x :: acc
+            case z: List[Any] => flat(z, acc)
+            case z => z :: acc
           }
         case x :: y => {
           x match {
-            case x: List[Any] => {
-              flat(y, flat(x, acc))
-            }
-            case x => flat(y, x :: acc)
+            case z: List[Any] =>flat(y, flat(z, acc))
+            case _ => flat(y, x :: acc)
           }
         }
       }
@@ -78,20 +76,20 @@ trait NNP10 {
   }
 
   def compress(list: List[Symbol]): List[Symbol] = {
-    def createCompress(target: List[Symbol], compress: List[Symbol]): List[Symbol] = {
+    def createCompress(target: List[Symbol], acc: List[Symbol]): List[Symbol] = {
       target match {
-        case Nil => compress
-        case x :: Nil => compress match {
-          case Nil => x :: compress
-          case a :: Nil if x != a => x :: compress
-          case a :: b if x != a => x :: compress
-          case a :: b if x == a => compress
+        case Nil => acc
+        case x :: Nil => acc match {
+          case Nil => x :: acc
+          case a :: Nil if x != a => x :: acc
+          case a :: _ if x != a => x :: acc
+          case a :: _ if x == a => acc
         }
-        case x :: y => createCompress(y, compress match {
-          case Nil => x :: compress
-          case a :: Nil if x != a => x :: compress
-          case a :: b if x != a => x :: compress
-          case _ :: b => compress
+        case x :: y => createCompress(y, acc match {
+          case Nil => x :: acc
+          case a :: Nil if x != a => x :: acc
+          case a :: _ if x != a => x :: acc
+          case _ :: _ => acc
         })
       }
     }
@@ -99,10 +97,30 @@ trait NNP10 {
   }
 
   def pack(list: List[Symbol]): List[List[Symbol]] = {
-    ???
+    def createPack(target: List[Symbol], acc: List[List[Symbol]]): List[List[Symbol]] = {
+      target match {
+        case Nil => acc
+        case x :: Nil if acc.head.head == x => (x :: acc.head) :: acc.tail
+        case x :: Nil => List(x) :: acc
+        case x :: y if acc == Nil => createPack(y, List(x) :: acc)
+        case x :: y if acc.head.head == x => createPack(y, (x :: acc.head) :: acc.tail)
+        case x :: y => createPack(y, List(x) :: acc)
+      }
+    }
+    createPack(list, Nil).reverse
   }
 
   def encode(list: List[Symbol]): List[(Int, Symbol)] = {
-    ???
+    def createEncode(target: List[Symbol], acc: List[(Int, Symbol)]): List[(Int, Symbol)] = {
+      target match {
+        case Nil => acc
+        case x :: Nil if acc.head._2 == x => (acc.head._1 + 1, acc.head._2) :: acc.tail
+        case x :: Nil => (acc.head._1 + 1, acc.head._2) :: acc.tail
+        case x :: y if acc == Nil => createEncode(y, (1, x) :: acc)
+        case x :: y if acc.head._2 == x => createEncode(y, (acc.head._1 + 1, acc.head._2) :: acc.tail)
+        case x :: y => createEncode(y, (1, x) :: acc)
+      }
+    }
+    createEncode(list, Nil).reverse
   }
 }
